@@ -56,6 +56,13 @@ You can also use any ARM chip with USB that [ChibiOS](https://www.chibios.org) s
 
  * [WB32F3G71xx](http://www.westberrytech.com)
  * [WB32FQ95xx](http://www.westberrytech.com)
+ 
+ ### Artery (AT32)
+
+ * [AT32F415](https://www.arterychip.com/en/product/AT32F415.jsp)
+ * [AT32F405](https://www.arterychip.com/en/product/AT32F405.jsp)
+ * [AT32F402](https://www.arterychip.com/en/product/AT32F402.jsp)
+ * [AT32F423](https://www.arterychip.com/en/product/AT32F423.jsp)
 
 ### NXP (Kinetis)
 

@@ -883,3 +883,110 @@ ifneq ($(findstring AT32F405, $(MCU)),)
   #EEPROM_DRIVER ?= transient
 endif
 
+ifneq ($(findstring AT32F402, $(MCU)),)
+  # Cortex version
+  MCU = cortex-m4
+
+  # ARM version, CORTEX-M0/M1 are 6, CORTEX-M3/M4/M7 are 7
+  ARMV = 7
+
+  ## chip/board settings
+  # - the next two should match the directories in
+  #   <chibios[-contrib]>/os/hal/ports/$(MCU_PORT_NAME)/$(MCU_SERIES)
+  #   OR
+  #   <chibios[-contrib]>/os/hal/ports/$(MCU_FAMILY)/$(MCU_SERIES)
+  MCU_FAMILY = AT32
+  MCU_SERIES = AT32F402xx
+
+  # Linker script to use
+  # - it should exist either in <chibios>/os/common/startup/ARMCMx/compilers/GCC/ld/
+  #   or <keyboard_dir>/ld/
+  MCU_LDSCRIPT ?= AT32F402xC
+
+  # Startup code to use
+  #  - it should exist in <chibios>/os/common/startup/ARMCMx/compilers/GCC/mk/
+  MCU_STARTUP ?= at32f402xx
+
+  # Board: it should exist either in <chibios>/os/hal/boards/,
+  # <keyboard_dir>/boards/, or drivers/boards/
+  BOARD ?= GENERIC_AT32_F402XC
+
+  USE_FPU ?= yes
+
+  # Bootloader address for AT32 DFU
+  AT32_BOOTLOADER_ADDRESS ?= 0x1FFFA400
+
+  # Default as no chibios efl config
+  #EEPROM_DRIVER ?= transient
+endif
+
+ifneq ($(findstring AT32F423, $(MCU)),)
+  # Cortex version
+  MCU = cortex-m4
+
+  # ARM version, CORTEX-M0/M1 are 6, CORTEX-M3/M4/M7 are 7
+  ARMV = 7
+
+  ## chip/board settings
+  # - the next two should match the directories in
+  #   <chibios[-contrib]>/os/hal/ports/$(MCU_PORT_NAME)/$(MCU_SERIES)
+  #   OR
+  #   <chibios[-contrib]>/os/hal/ports/$(MCU_FAMILY)/$(MCU_SERIES)
+  MCU_FAMILY = AT32
+  MCU_SERIES = AT32F423xx
+
+  # Linker script to use
+  # - it should exist either in <chibios>/os/common/startup/ARMCMx/compilers/GCC/ld/
+  #   or <keyboard_dir>/ld/
+  MCU_LDSCRIPT ?= AT32F423xC
+
+  # Startup code to use
+  #  - it should exist in <chibios>/os/common/startup/ARMCMx/compilers/GCC/mk/
+  MCU_STARTUP ?= at32f423xx
+
+  # Board: it should exist either in <chibios>/os/hal/boards/,
+  # <keyboard_dir>/boards/, or drivers/boards/
+  BOARD ?= GENERIC_AT32_F423XC
+
+  USE_FPU ?= yes
+
+  # Bootloader address for AT32 DFU
+  AT32_BOOTLOADER_ADDRESS ?= 0x1FFFA400
+
+  # Default as no chibios efl config
+  #EEPROM_DRIVER ?= transient
+endif
+
+ifneq ($(findstring AT32F415, $(MCU)),)
+  # Cortex version
+  MCU = cortex-m4
+
+  # ARM version, CORTEX-M0/M1 are 6, CORTEX-M3/M4/M7 are 7
+  ARMV = 7
+
+  ## chip/board settings
+  # - the next two should match the directories in
+  #   <chibios[-contrib]>/os/hal/ports/$(MCU_PORT_NAME)/$(MCU_SERIES)
+  #   OR
+  #   <chibios[-contrib]>/os/hal/ports/$(MCU_FAMILY)/$(MCU_SERIES)
+  MCU_FAMILY = AT32
+  MCU_SERIES = AT32F415
+
+  # Linker script to use
+  # - it should exist either in <chibios>/os/common/startup/ARMCMx/compilers/GCC/ld/
+  #   or <keyboard_dir>/ld/
+  MCU_LDSCRIPT ?= AT32F415xB
+
+  # Startup code to use
+  #  - it should exist in <chibios>/os/common/startup/ARMCMx/compilers/GCC/mk/
+  MCU_STARTUP ?= at32f415
+
+  # Board: it should exist either in <chibios>/os/hal/boards/,
+  # <keyboard_dir>/boards/, or drivers/boards/
+  BOARD ?= GENERIC_AT32_F415XX
+
+  USE_FPU ?= no
+
+  # Bootloader address for AT32 DFU
+  AT32_BOOTLOADER_ADDRESS ?= 0x1FFFAC00
+endif
